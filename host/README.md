@@ -1,7 +1,9 @@
 # Environment
 
-* Oracle VM VirtualBox Manager 5.1.14
-* Vagrant 1.9.1
+* CPU: x86_64
+* OS: masOS Sierra 10.12.3 (Darwin)
+* Oracle VM VirtualBox Manager: 5.1.14
+* Vagrant: 1.9.1
 
 # 4 nodes deployment
 
