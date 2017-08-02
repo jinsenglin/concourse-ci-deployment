@@ -40,4 +40,4 @@ CONCOURSE_EXTERNAL_URL=http://192.168.240.5:8080 docker-compose up
 
 # TODO
 
-* 4 nodes deployment
+* 4 nodes deployment (currently missing vault node)
