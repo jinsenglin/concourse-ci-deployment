@@ -1,4 +1,9 @@
-# concourse-ci-deployment
+# Environment
+
+* CPU: x86_64
+* OS: Ubuntu 16.04.2 LTS
+* Docker Engine: version 17.06.0-ce, build 02c1d87
+* Docker Compose: version 1.11.2, build dfed245
 
 # 4 nodes deployment
 
