@@ -9,7 +9,7 @@
 
 ---
 
-# Prerequites
+# Prerequisites
 
 Use helper script `make-rsa-keys.sh` to generate RSA keys.
 
