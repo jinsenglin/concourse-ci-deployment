@@ -18,9 +18,3 @@ cd tests
 fly -t concourse-ci login --concourse-url $HTTP://$HOST:$PORT --team-name=main --username=$ADMIN_USER --password=$ADMIN_PASS
 fly -t concourse-ci execute -c test-your-deployment.yml
 ```
-
----
-
-# TODO
-
-* tests/test-your-deployment.yml
