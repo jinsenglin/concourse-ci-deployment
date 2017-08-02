@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  concourse-db:
+  db:
     image: postgres:9.5
     environment:
       POSTGRES_DB: concourse
@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: changeme
       PGDATA: /database
 
-  concourse-web:
+  web:
     image: concourse/concourse:3.3.4
     links: [concourse-db]
     command: web
@@ -26,7 +26,7 @@ services:
       CONCOURSE_POSTGRES_PASSWORD: changeme
       CONCOURSE_POSTGRES_DATABASE: concourse
 
-  concourse-worker:
+  worker:
     image: concourse/concourse:3.3.4
     privileged: true
     links: [concourse-web]
@@ -35,3 +35,6 @@ services:
     volumes: ["./keys/worker:/concourse-keys"]
     environment:
       CONCOURSE_TSA_HOST: concourse-web
+
+  vault:
+    image: busybox:latest
