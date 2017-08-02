@@ -26,7 +26,7 @@ Use `docker-compose` CLI to deploy Concourse CI.
 
 ```
 cd docker-compose
-docker-compose up
+CONCOURSE_EXTERNAL_URL=http://192.168.240.5:8080 docker-compose up
 ```
 
 ---
