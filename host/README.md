@@ -4,6 +4,7 @@
 * OS: masOS Sierra 10.12.3 (Darwin)
 * Oracle VM VirtualBox Manager: 5.1.14
 * Vagrant: 1.9.1
+* Ansible: 2.2.0.0
 
 # 4 nodes deployment
 

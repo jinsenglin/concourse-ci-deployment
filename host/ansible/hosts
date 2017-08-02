@@ -1,11 +1,11 @@
 [web]
-web1 ansible_ssh_host=192.168.33.101 ansible_ssh_user=ubuntu ansible_ssh_pass=root
+web1 ansible_host=192.168.33.101 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=web.private_key
 
 [db]
-db1 ansible_ssh_host=192.168.33.101 ansible_ssh_user=ubuntu ansible_ssh_pass=root
+db1 ansible_host=192.168.33.102 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=db.private_key
 
 [worker]
-worker1 ansible_ssh_host=192.168.33.101 ansible_ssh_user=ubuntu ansible_ssh_pass=root
+worker1 ansible_host=192.168.33.103 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=worker.private_key
 
 [vault]
-vault1 ansible_ssh_host=192.168.33.101 ansible_ssh_user=ubuntu ansible_ssh_pass=root
+vault1 ansible_host=192.168.33.104 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=vault.private_key
