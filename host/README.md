@@ -9,7 +9,7 @@
 
 ---
 
-# Host
+# Prerequisites
 
 Use Vagrant to quickly provision 4 hosts.
 

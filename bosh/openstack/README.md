@@ -9,7 +9,7 @@
 
 ---
 
-# Cloud
+# Prerequisites
 
 Follow following steps to prepare your cloud resources.
 
