@@ -1,4 +1,7 @@
-# concourse-ci-deployment
+# Environment
+
+* Oracle VM VirtualBox Manager 5.1.14
+* Vagrant 1.9.1
 
 # 4 nodes deployment
 
