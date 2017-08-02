@@ -9,7 +9,7 @@
 
 ---
 
-# ?
+# Prerequites
 
 Use helper script `make-rsa-keys.sh` to generate RSA keys.
 
@@ -31,7 +31,13 @@ CONCOURSE_EXTERNAL_URL=http://192.168.240.5:8080 docker-compose up
 
 ---
 
+# Note
+
+* IP 192.168.240.5 is the Docker Engine host external IP.
+* Concourse CI v3.3.4 passed the test.
+
+---
+
 # TODO
 
-* rsa-keys/make-rsa-keys.sh
-* docker-compose/docker-compose.yml
+* 4 nodes deployment
