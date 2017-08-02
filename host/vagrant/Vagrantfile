@@ -12,8 +12,6 @@ Vagrant.configure("2") do |config|
       p.cpus = "1"
       p.memory = "1024"
     end
-    d.ssh.username = "ubuntu"
-    d.ssh.password = "ubuntu"
   end
 
   config.vm.define "db" do |d|
@@ -25,8 +23,6 @@ Vagrant.configure("2") do |config|
       p.cpus = "1"
       p.memory = "1024"
     end
-    d.ssh.username = "ubuntu"
-    d.ssh.password = "ubuntu"
   end
 
   config.vm.define "worker" do |d|
@@ -38,8 +34,6 @@ Vagrant.configure("2") do |config|
       p.cpus = "1"
       p.memory = "1024"
     end
-    d.ssh.username = "ubuntu"
-    d.ssh.password = "ubuntu"
   end
 
   config.vm.define "vault" do |d|
@@ -51,7 +45,5 @@ Vagrant.configure("2") do |config|
       p.cpus = "1"
       p.memory = "1024"
     end
-    d.ssh.username = "ubuntu"
-    d.ssh.password = "ubuntu"
   end
 end
