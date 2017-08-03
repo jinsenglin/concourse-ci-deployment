@@ -39,6 +39,7 @@ ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -vvvv -i hosts -e @vars.yml pla
 
 # TODO
 
+* vagrant/Vagrantfile
 * by-ansible/vars.yml
 * by-ansible/roles/web/
 * by-ansible/roles/db/
