@@ -35,10 +35,11 @@ cd by-bosh/ssl-certs
 BOSH_DIRECTOR_HOST=192.168.210.25 ./make-self-signed-ssl-certs.sh
 ```
 
-Use helper script `?` to generate final bosh-director.yml
+Use helper script `make-final-bosh-director-deployment.sh` to generate final bosh-director.yml
 
 ```
-# TODO
+cd by-bosh/bosh-deployments
+./make-final-bosh-director-deployment.sh
 ```
 
 Use `bosh-init` CLI to deploy BOSH Director.
@@ -48,10 +49,11 @@ cd by-bosh/bosh-director-deployment
 bosh-init deploy bosh-director.yml
 ```
 
-Use helper script `?` to generate final concourse-ci.yml
+Use helper script `make-final-concourse-ci-deployment.sh` to generate final concourse-ci.yml
 
 ```
-# TODO
+cd by-bosh/bosh-deployments
+./make-final-concourse-ci-deployment.sh
 ```
 
 ---
@@ -76,5 +78,7 @@ BOSH_DIRECTOR_HOST=192.168.210.25 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 # TODO
 
 * by-bosh/cloud-resources/make-cloud-resources.sh
+* by-bosh/bosh-deployments/make-final-bosh-director-deployment.sh
+* by-bosh/bosh-deployments/make-final-concourse-ci-deployment.sh
 * by-bosh/bosh-director-deployment/bosh-director.yml
 * by-bosh/concourse-ci-deployment/concourse-ci.yml
