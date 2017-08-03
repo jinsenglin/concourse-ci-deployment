@@ -11,26 +11,24 @@
 
 # Prerequisites
 
-Follow following steps to prepare your cloud resources.
-
 Use helper script `make-cloud-resources.sh` to reserve cloud resources.
 
 ```
-cd cloud-resources
+cd by-bosh/cloud-resources
 ./make-cloud-resources.sh
 ```
 
 Use helper script `make-self-signed-ssl-certs.sh` to generate SSL certificates.
 
 ```
-cd ssl-certs
+cd by-bosh/ssl-certs
 ./make-self-signed-ssl-certs.sh
 ```
 
 Use `bosh-init` CLI to deploy BOSH Director.
 
 ```
-cd bosh-director-deployment
+cd by-bosh/bosh-director-deployment
 bosh-init deploy bosh-director.yml
 ```
 
@@ -41,7 +39,7 @@ bosh-init deploy bosh-director.yml
 Use `bosh` CLI to deploy Concourse CI.
 
 ```
-cd concourse-ci-deployment
+cd by-bosh/concourse-ci-deployment
 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_IP -d concourse-ci concourse-ci.yml
 ```
 
@@ -49,7 +47,7 @@ bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_IP -d concourse-ci concourse
 
 # TODO
 
-* cloud-resources/make-cloud-resources.sh
-* ssl-certs/make-self-signed-ssl-certs.sh
-* bosh-director-deployment/bosh-director.yml
-* concourse-ci-deployment/concourse-ci.yml
+* by-bosh/cloud-resources/make-cloud-resources.sh
+* by-bosh/ssl-certs/make-self-signed-ssl-certs.sh
+* by-bosh/bosh-director-deployment/bosh-director.yml
+* by-bosh/concourse-ci-deployment/concourse-ci.yml
