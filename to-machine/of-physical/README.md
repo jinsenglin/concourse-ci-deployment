@@ -1,9 +1,5 @@
 # Environment
 
-* CPU: x86_64
-* OS: masOS Sierra 10.12.3 (Darwin)
-* Oracle VM VirtualBox Manager: 5.1.14
-* Vagrant: 1.9.1
 * Ansible: 2.2.0.0
 
 # 4 nodes deployment
@@ -17,14 +13,7 @@
 
 # Prerequisites
 
-Use Vagrant to quickly provision 4 hosts.
-
-```
-cd vagrant
-vagrant up
-```
-
-NOTE: If your want to use the hosts not provisioned by `vagrant/Vagrantfile`, modify the file `ansible/hosts`.
+Modify the file `by-ansible/hosts`.
 
 ---
 
@@ -33,15 +22,6 @@ NOTE: If your want to use the hosts not provisioned by `vagrant/Vagrantfile`, mo
 Use Ansible to deploy Concourse CI.
 
 ```
-cd ansible
+cd by-ansible
 ansible-playbook -vvvv -i hosts -e @vars.yml playbook.yml 
 ```
-
----
-
-# TODO
-
-* vagrant/Vagrantfile
-* ansible/hosts
-* ansible/vars.yml
-* ansible/playbook.yml
