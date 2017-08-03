@@ -1,6 +1,6 @@
-# concourse-ci-deployment
+# My Environment
 
-# 4 nodes deployment
+# Goal: 4 nodes Concourse CI deployment
 
 * 1 vault
 * 1 web

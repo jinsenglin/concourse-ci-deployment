@@ -1,8 +1,8 @@
-# Environment
+# My Environment
 
 * Ansible: 2.2.0.0
 
-# 4 nodes deployment
+# Goal: 4 nodes Concourse CI deployment
 
 * 1 vault
 * 1 web

@@ -1,4 +1,4 @@
-# Environment
+# My Environment
 
 * CPU: x86_64
 * OS: masOS Sierra 10.12.3 (Darwin)
@@ -6,7 +6,7 @@
 * Vagrant: 1.9.1
 * Ansible: 2.2.0.0
 
-# 4 nodes deployment
+# Goal: 4 nodes Concourse CI deployment
 
 * 1 vault
 * 1 web

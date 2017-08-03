@@ -1,6 +1,4 @@
-# concourse-ci-deployment
-
-# 4 nodes deployment
+# 4 nodes Concourse CI deployment
 
 * 1 vault
 * 1 web
