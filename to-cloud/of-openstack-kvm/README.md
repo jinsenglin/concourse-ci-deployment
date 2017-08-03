@@ -52,6 +52,12 @@ bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_IP -d concourse-ci concourse
 
 ---
 
+# Note
+
+* IP 192.168.210.25 is the floating IP collected from / assigned by OpenStack.
+
+---
+
 # TODO
 
 * by-bosh/cloud-resources/make-cloud-resources.sh
