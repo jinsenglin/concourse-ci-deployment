@@ -23,5 +23,5 @@ Use Ansible to deploy Concourse CI.
 
 ```
 cd by-ansible
-ansible-playbook -vvvv -i hosts -e @vars.yml playbook.yml 
+ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -vvvv -i hosts -e @vars.yml playbook.yml 
 ```
