@@ -35,11 +35,23 @@ cd by-bosh/ssl-certs
 BOSH_DIRECTOR_HOST=192.168.210.25 ./make-self-signed-ssl-certs.sh
 ```
 
+Use helper script `?` to generate final bosh-director.yml
+
+```
+# TODO
+```
+
 Use `bosh-init` CLI to deploy BOSH Director.
 
 ```
 cd by-bosh/bosh-director-deployment
 bosh-init deploy bosh-director.yml
+```
+
+Use helper script `?` to generate final concourse-ci.yml
+
+```
+# TODO
 ```
 
 ---
