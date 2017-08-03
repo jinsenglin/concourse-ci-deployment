@@ -1,5 +1,8 @@
 # My Environment
 
+* CPU: x86_64
+* OS: masOS Sierra 10.12.3 (Darwin)
+
 # Goal: 4 nodes Concourse CI deployment
 
 * 1 vault
