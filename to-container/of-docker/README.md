@@ -30,8 +30,15 @@ cd rsa-keys
 Use `docker-compose` CLI to deploy Concourse CI.
 
 ```
-cd docker-compose
+cd by-docker-compose
 CONCOURSE_EXTERNAL_URL=http://192.168.240.5:8080 docker-compose up
+```
+
+Use `kubectl` CLI to deploy Concourse CI.
+
+```
+cd by-k8s
+# TODO
 ```
 
 ---

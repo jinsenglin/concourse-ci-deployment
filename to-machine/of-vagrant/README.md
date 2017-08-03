@@ -24,8 +24,6 @@ cd vagrant
 vagrant up
 ```
 
-NOTE: If your want to use the hosts not provisioned by `vagrant/Vagrantfile`, modify the file `ansible/hosts`.
-
 ---
 
 # Deployment
@@ -33,7 +31,7 @@ NOTE: If your want to use the hosts not provisioned by `vagrant/Vagrantfile`, mo
 Use Ansible to deploy Concourse CI.
 
 ```
-cd ansible
+cd by-ansible
 ansible-playbook -vvvv -i hosts -e @vars.yml playbook.yml 
 ```
 
@@ -42,6 +40,6 @@ ansible-playbook -vvvv -i hosts -e @vars.yml playbook.yml
 # TODO
 
 * vagrant/Vagrantfile
-* ansible/hosts
-* ansible/vars.yml
-* ansible/playbook.yml
+* by-ansible/hosts
+* by-ansible/vars.yml
+* by-ansible/playbook.yml
