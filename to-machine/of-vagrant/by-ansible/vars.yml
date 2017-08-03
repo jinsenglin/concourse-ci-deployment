@@ -1,1 +1,3 @@
 ---
+concourse-ci:
+  download-url: https://github.com/concourse/concourse/releases/download/v3.3.4/concourse_linux_amd64

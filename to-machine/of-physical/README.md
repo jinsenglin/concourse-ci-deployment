@@ -15,7 +15,7 @@
 
 Modify the file `by-ansible/hosts`.
 
-Make sure python 2.7+ pre-installed in the target machines.
+Make sure python 2.7+ pre-installed in the target machines (CPU: x86_64, OS: Linux).
 
 ---
 
