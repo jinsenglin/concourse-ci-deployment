@@ -40,3 +40,7 @@ ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -vvvv -i hosts -e @vars.yml pla
 # TODO
 
 * by-ansible/vars.yml
+* by-ansible/roles/web/
+* by-ansible/roles/db/
+* by-ansible/roles/worker/
+* by-ansible/roles/vault/
