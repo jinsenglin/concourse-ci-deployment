@@ -11,11 +11,18 @@
 
 # Prerequisites
 
-Use helper script `make-cloud-resources.sh` to reserve cloud resources.
+Method 1: Use helper script `make-cloud-resources.sh` to collect information of available existing cloud resources.
 
 ```
 cd by-bosh/cloud-resources
-./make-cloud-resources.sh
+./make-cloud-resources.sh collect
+```
+
+Method 2: Use helper script `make-cloud-resources.sh` to reserve cloud resources.
+
+```
+cd by-bosh/cloud-resources
+./make-cloud-resources.sh reserve
 ```
 
 Use helper script `make-self-signed-ssl-certs.sh` to generate SSL certificates.
