@@ -22,7 +22,7 @@ Method 2: Use helper script `make-cloud-resources.sh` to reserve cloud resources
 
 ```
 cd by-bosh/cloud-resources
-./make-cloud-resources.sh reserve
+./make-cloud-resources.sh reserve-collect
 ```
 
 Use helper script `make-self-signed-ssl-certs.sh` to generate SSL certificates.
