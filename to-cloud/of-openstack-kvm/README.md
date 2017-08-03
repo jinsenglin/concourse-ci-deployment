@@ -29,7 +29,7 @@ Use helper script `make-self-signed-ssl-certs.sh` to generate SSL certificates.
 
 ```
 cd by-bosh/ssl-certs
-./make-self-signed-ssl-certs.sh
+BOSH_DIRECTOR_HOST=192.168.210.25 ./make-self-signed-ssl-certs.sh
 ```
 
 Use `bosh-init` CLI to deploy BOSH Director.
