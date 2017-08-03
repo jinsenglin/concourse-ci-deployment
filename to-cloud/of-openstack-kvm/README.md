@@ -47,7 +47,7 @@ Use `bosh` CLI to deploy Concourse CI.
 
 ```
 cd by-bosh/concourse-ci-deployment
-bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_IP -d concourse-ci concourse-ci.yml
+BOSH_DIRECTOR_HOST=192.168.210.25 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_HOST -d concourse-ci concourse-ci.yml
 ```
 
 ---
@@ -61,6 +61,5 @@ bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_IP -d concourse-ci concourse
 # TODO
 
 * by-bosh/cloud-resources/make-cloud-resources.sh
-* by-bosh/ssl-certs/make-self-signed-ssl-certs.sh
 * by-bosh/bosh-director-deployment/bosh-director.yml
 * by-bosh/concourse-ci-deployment/concourse-ci.yml
