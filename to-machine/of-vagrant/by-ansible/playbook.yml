@@ -1,17 +1,17 @@
 ---
-#- name: Hello Web
-#  hosts: web
-#  roles:
-#    - role: web
-#- name: Hello DB
-#  hosts: db
-#  roles:
-#    - role: db
-#- name: Hello Worker
-#  hosts: worker
-#  roles:
-#    - role: worker
-- name: Hello Vault
+- name: Deploy Web Nodes
+  hosts: web
+  roles:
+    - role: web
+- name: Deploy DB Nodes
+  hosts: db
+  roles:
+    - role: db
+- name: Deploy Worker Nodes
+  hosts: worker
+  roles:
+    - role: worker
+- name: Deploy Vault Nodes
   hosts: vault
   roles:
     - role: vault
