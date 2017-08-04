@@ -17,17 +17,17 @@ function collect_op() {
 
     echo "export OS_AUTH_URL=http://192.168.228.31:5000/v3" | tee -a $resources/rc
     echo "export OS_DOMAIN=default" | tee -a $resources/rc
-    echo "export OS_PROJECT=devops" | tee -a $resources/rc
-    echo "export OS_USERNAME=devops" | tee -a $resources/rc
-    echo "export OS_PASSWORD=devops" | tee -a $resources/rc
+    echo "export OS_PROJECT=jimlin" | tee -a $resources/rc
+    echo "export OS_USERNAME=jimlin" | tee -a $resources/rc
+    echo "export OS_PASSWORD=jimlin" | tee -a $resources/rc
     echo "export OS_RES_SECURITY_GROUP=bosh" | tee -a $resources/rc
     echo "export OS_RES_KEY_PAIR=bosh" | tee -a $resources/rc
-    echo "export OS_RES_NETWORK_UUID=0cb3a322-67d9-47ef-bd54-7420c106fd2b" | tee -a $resources/rc
-    echo "export OS_RES_NETWORK_SUBNET_CIDR=192.168.200.0/24" | tee -a $resources/rc
-    echo "export OS_RES_NETWORK_SUBNET_GW=192.168.200.1" | tee -a $resources/rc
-    echo "export OS_RES_NETWORK_SUBNET_DHCP=192.168.200.2" | tee -a $resources/rc
-    echo "export OS_RES_NETWORK_SUBNET_DIRECTOR=192.168.200.3" | tee -a $resources/rc
-    echo "export OS_RES_FLOATING_IP_BOSH_DIRECTOR=192.168.210.25" | tee -a $resources/rc
+    echo "export OS_RES_NETWORK_UUID=a57de587-1bea-4173-9fed-1585b9c388ae" | tee -a $resources/rc
+    echo "export OS_RES_NETWORK_SUBNET_CIDR=192.168.103.0/24" | tee -a $resources/rc
+    echo "export OS_RES_NETWORK_SUBNET_GW=192.168.103.1" | tee -a $resources/rc
+    echo "export OS_RES_NETWORK_SUBNET_DHCP=192.168.103.2" | tee -a $resources/rc
+    echo "export OS_RES_NETWORK_SUBNET_DIRECTOR=192.168.103.3" | tee -a $resources/rc
+    echo "export OS_RES_FLOATING_IP_BOSH_DIRECTOR=192.168.240.34" | tee -a $resources/rc
 }
 
 function reserve_op() {
