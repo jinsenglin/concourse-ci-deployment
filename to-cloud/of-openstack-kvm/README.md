@@ -32,6 +32,9 @@ Use helper script `make-self-signed-ssl-certs.sh` to generate SSL certificates.
 
 ```
 cd by-bosh/ssl-certs
+./make-self-signed-ssl-certs.sh
+
+# or use BOSH_DIRECTOR_HOST to precede OS_RES_FLOATING_IP_BOSH_DIRECTOR 
 BOSH_DIRECTOR_HOST=192.168.210.25 ./make-self-signed-ssl-certs.sh
 ```
 

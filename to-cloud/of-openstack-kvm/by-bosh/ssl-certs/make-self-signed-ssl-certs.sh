@@ -2,7 +2,7 @@
 
 set -e
 
-source rc
+[ -f rc ] && source rc
 
 if [ -z $BOSH_DIRECTOR_HOST ]; then
     if [ -z $OS_RES_FLOATING_IP_BOSH_DIRECTOR ]; then
