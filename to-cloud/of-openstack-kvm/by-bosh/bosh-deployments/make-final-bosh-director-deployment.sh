@@ -5,6 +5,10 @@ set -e
 [ -d deployments ] || mkdir deployments
 
 if [ -f rc ]; then
+    sed -E 's/(.*)/      \1/g' ca-cert | tee deployments/ca-cert
+    sed -E 's/(.*)/      \1/g' director-cert | tee deployments/director-cert 
+    sed -E 's/(.*)/      \1/g' director-key | tee deployments/director-key
+
     source rc
 
     sed "s|REPLACE_WITH_OS_AUTH_URL|$OS_AUTH_URL|g" templates/openstack-stub.yml | \
@@ -21,6 +25,10 @@ if [ -f rc ]; then
     sed "s|REPLACE_WITH_OS_RES_NETWORK_SUBNET_DIRECTOR|$OS_RES_NETWORK_SUBNET_DIRECTOR|g" | \
     sed "s|REPLACE_WITH_OS_RES_FLOATING_IP_BOSH_DIRECTOR|$OS_RES_FLOATING_IP_BOSH_DIRECTOR|g" | \
     tee deployments/openstack-stub.yml
+
+    sed -i '/ca-cert/ r deployments/ca-cert' deployments/openstack-stub.yml
+    sed -i '/director-cert/ r deployments/director-cert' deployments/openstack-stub.yml
+    sed -i '/director-key/ r deployments/director-key' deployments/openstack-stub.yml
 else
     echo Skipping making deployments/openstack-stub.yml
 fi
