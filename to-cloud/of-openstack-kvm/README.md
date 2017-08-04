@@ -86,14 +86,14 @@ cd by-bosh/backup-restore-phase1
 ./backup-phase1.sh <backup dest dir>
 ```
 
+## Phase 2
+
 Use helper script `restore-phase1.sh` to restore phase 1 outputs
 
 ```
 cd by-bosh/backup-restore-phase1
 ./restore-phase1.sh <backup src dir>
 ```
-
-## Phase 2
 
 Use helper script `make-final-concourse-ci-deployment.sh` to generate final concourse-ci.yml
 
