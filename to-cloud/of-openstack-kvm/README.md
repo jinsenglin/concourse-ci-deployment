@@ -80,5 +80,3 @@ BOSH_DIRECTOR_HOST=192.168.210.25 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 * by-bosh/cloud-resources/make-cloud-resources.sh
 * by-bosh/bosh-deployments/make-final-bosh-director-deployment.sh
 * by-bosh/bosh-deployments/make-final-concourse-ci-deployment.sh
-* by-bosh/bosh-director-deployment/bosh-director.yml
-* by-bosh/concourse-ci-deployment/concourse-ci.yml
