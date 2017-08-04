@@ -20,7 +20,7 @@ function collect_op() {
     echo "export OS_PROJECT=devops" | tee -a $resources/rc
     echo "export OS_USERNAME=devops" | tee -a $resources/rc
     echo "export OS_PASSWORD=devops" | tee -a $resources/rc
-    echo "export OS_RES_SECURITY_GROUP_=bosh" | tee -a $resources/rc
+    echo "export OS_RES_SECURITY_GROUP=bosh" | tee -a $resources/rc
     echo "export OS_RES_KEY_PAIR=bosh" | tee -a $resources/rc
     echo "export OS_RES_NETWORK_UUID=0cb3a322-67d9-47ef-bd54-7420c106fd2b" | tee -a $resources/rc
     echo "export OS_RES_NETWORK_SUBNET_CIDR=192.168.200.0/24" | tee -a $resources/rc
