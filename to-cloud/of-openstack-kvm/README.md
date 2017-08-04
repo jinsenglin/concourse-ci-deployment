@@ -2,6 +2,9 @@
 
 * CPU: x86_64
 * OS: masOS Sierra 10.12.3 (Darwin)
+* spiff cli: 1.0.8
+* bosh-init cli: 0.0.102
+* bosh cli: 2.0.1
 
 # Goal: 4 nodes Concourse CI deployment
 
