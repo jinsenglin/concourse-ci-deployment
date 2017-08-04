@@ -60,6 +60,9 @@ cd by-bosh/bosh-director-deployment
 bosh-init deploy bosh-director.yml
 
 # output: bosh-director-state.json
+
+# To delete this deployment
+# Run `bosh-init delete bosh-director.yml`
 ```
 
 Use helper script `make-final-concourse-ci-deployment.sh` to generate final concourse-ci.yml
