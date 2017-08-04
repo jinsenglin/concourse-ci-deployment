@@ -6,7 +6,7 @@ stub:
     domain: REPLACE_WITH_OS_DOMAIN # <--- Replace with OpenStack domain name
     username: REPLACE_WITH_OS_USERNAME # <--- Replace with OpenStack username
     password: REPLACE_WITH_OS_PASSWORD # <--- Replace with OpenStack password
-    security-group-name: REPLACE_WITH_OS_RES_SECURITY_GROUP_
+    security-group-name: REPLACE_WITH_OS_RES_SECURITY_GROUP
     key-pair-name: REPLACE_WITH_OS_RES_KEY_PAIR
     network:
       cidr: REPLACE_WITH_OS_RES_NETWORK_SUBNET_CIDR # <--- Replace with a private subnet CIDR
