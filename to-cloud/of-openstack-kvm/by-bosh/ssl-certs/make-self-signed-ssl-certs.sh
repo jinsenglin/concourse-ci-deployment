@@ -2,27 +2,32 @@
 
 set -e
 
-if [ -z $BOSH_DIRECTOR_HOST]; then
-    echo "Error. Missing environment variable BOSH_DIRECTOR_HOST."
-    exit 1
+source rc
+
+if [ -z $BOSH_DIRECTOR_HOST ]; then
+    if [ -z $OS_RES_FLOATING_IP_BOSH_DIRECTOR ]; then
+        echo "Error. Missing environment variable BOSH_DIRECTOR_HOST."
+        exit 1
+    else
+        BDIP=$OS_RES_FLOATING_IP_BOSH_DIRECTOR
+    fi
+else
+    BDIP=$BOSH_DIRECTOR_HOST
 fi
 
-BDIP=$BOSH_DIRECTOR_HOST
+########################
 
-certs=`dirname $0`/certs
-
+certs=$(dirname $0)/certs
 rm -rf $certs && mkdir -p $certs
-
 cd $certs
 
 echo "Generating CA..."
 openssl genrsa -out rootCA.key 2048
-yes "" | openssl req -x509 -new -nodes -key rootCA.key \
-  -out rootCA.pem -days 99999
+yes "" | openssl req -x509 -new -nodes -key rootCA.key -out rootCA.pem -days 99999
 
 function generateCert {
-  name=$1
-  ip=$2
+  local name=$1
+  local ip=$2
 
   cat >openssl-exts.conf <<-EOL
 extensions = san
@@ -55,4 +60,3 @@ generateCert uaa-web $BDIP  # <--- Replace with public Director IP
 generateCert uaa-sp $BDIP   # <--- Replace with public Director IP
 
 echo "Finished..."
-ls -la .
