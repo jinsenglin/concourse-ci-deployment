@@ -1,0 +1,241 @@
+---
+stub:
+  openstack:
+    auth_url: http://192.168.228.31:5000/v3 # <--- Replace with OpenStack Identity API endpoint
+    project: jimlin # <--- Replace with OpenStack project name
+    domain: default # <--- Replace with OpenStack domain name
+    username: jimlin # <--- Replace with OpenStack username
+    password: jimlin # <--- Replace with OpenStack password
+    security-group-name: bosh
+    key-pair-name: bosh
+    network:
+      cidr: 192.168.200.0/24 # <--- Replace with a private subnet CIDR
+      gw: 192.168.200.1 # <--- Replace with a private subnet's gateway
+      uuid: 0cb3a322-67d9-47ef-bd54-7420c106fd2b # <--- # Replace with private network UUID
+  server:
+    bosh:
+      private-ip: 192.168.200.3 # <--- Replace with a private IP 
+      public-ip: 192.168.210.25 # <--- Replace with a floating IP
+  ssl:
+    ca-cert: |
+      -----BEGIN CERTIFICATE-----
+      MIIDtzCCAp+gAwIBAgIJAKmFXE5LpT9YMA0GCSqGSIb3DQEBBQUAMEUxCzAJBgNV
+      BAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBX
+      aWRnaXRzIFB0eSBMdGQwIBcNMTcwMzI1MDkzOTMxWhgPMjI5MTAxMDcwOTM5MzFa
+      MEUxCzAJBgNVBAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJ
+      bnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+      ggEKAoIBAQDItd7Mi8pab8YO+1L5SQSDHkzuSvnc04ycIe+uZy3+rRO8ONvo4yZF
+      rva4ouwxmvFNDvVMOA+PTR9/IO4wMFMOH61LRQMJ+ltbHdEcu+GBci4w8yWLJ0ZC
+      E3TcwLCSrkrOgCU0OcUhxWzcOcihtWGWozp1OQ/mmjlvqYPVCeSvPFKUHhNYbsSi
+      SK3TSwsFPOPlA5CtoSgKtRrPIkbnTKxkZFCHmX6NQaa+sbiOphnnaIgNj66WRRMg
+      njJwYVf2KWIdEuND7wrxQMeseh3ff3aI1jj2hSJZaXMyOUjuZ10B2Ew1Injxhukf
+      2EVV/QkC2pvyvbhcZmp5oHsjAmRWIEjvAgMBAAGjgacwgaQwHQYDVR0OBBYEFNQ1
+      bx8IRIIrcO8Zx6S0nTil3CuYMHUGA1UdIwRuMGyAFNQ1bx8IRIIrcO8Zx6S0nTil
+      3CuYoUmkRzBFMQswCQYDVQQGEwJBVTETMBEGA1UECBMKU29tZS1TdGF0ZTEhMB8G
+      A1UEChMYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkggkAqYVcTkulP1gwDAYDVR0T
+      BAUwAwEB/zANBgkqhkiG9w0BAQUFAAOCAQEAun8+ihch+g4NQQioujFD3S83/uDu
+      W+GmLBzQGZ4QSGUhPP4PjmyzhSbuxC402x7dAhBnt/brpJxy7mSZ+lAHdgy0/GSS
+      +il0I4y1/cZ29UoZs4JWdKRmHF7LSRVLS4hWSrlOGfWP4Gl6bQwM3Gkavc1iaX1b
+      q0uvaJO7+3bCs1XFmpF9zf3ZXGN+gvoaD520lcACL9hcYhSiJLOtk3sKVMVGbSqm
+      WVSr6egQnlvccumhQ21C/uNGbxtMjfbGcigcZb7tXNlj1j7Gk1pCxQbeWzlDy5sx
+      1ulWs0BNHCNRWkuEnJRW0MoqaY6zeNik66g1tLR/n5wLWC30848bsUHw5Q==
+      -----END CERTIFICATE-----
+    director-cert: |
+      -----BEGIN CERTIFICATE-----
+      MIIDEjCCAfqgAwIBAgIJAKSK1fuKu1jbMA0GCSqGSIb3DQEBBQUAMEUxCzAJBgNV
+      BAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBX
+      aWRnaXRzIFB0eSBMdGQwIBcNMTcwMzI1MDkzOTMxWhgPMjI5MTAxMDcwOTM5MzFa
+      MDUxCzAJBgNVBAYTAlVTMQ0wCwYDVQQKEwRCT1NIMRcwFQYDVQQDEw4xOTIuMTY4
+      LjIxMC4yNTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOikdw22jtiL
+      gdDtTxfXSCdE8JClMRScX7Za046iB8AFKbZupk93L+Z71nG+TzT6M50576sOLq+a
+      wOLEV+j0mjfOSey/IVbHjcCzqDmqmNFaKc8Ss5uF/3yaD2kzs67pGplQ6kwWFMyd
+      vtm7JN5C8coHYsB7hj/xhbhy9aqoUBKrZy2YFmTXVgNia1H9kVn95fxWPddYDLDS
+      Z7hXK5aP89zNvkieqJpG63PV9jUH1pqbfACt3xymtvEtGe4ZBoGT4Qd2QlS7FPg1
+      gwNoXn9if0dyyPvmQu1C39/39+GyN0WYregqaQUSSJgNSdc+ZHD9AdBCYCR0sNPq
+      4gBOVptnV6UCAwEAAaMTMBEwDwYDVR0RBAgwBocEwKjSGTANBgkqhkiG9w0BAQUF
+      AAOCAQEAtBNjbDIejcsp+JlTe77Hj/PQpXVRqr4vx8ZYxemOistT34ZXvjfXLjcR
+      n4oudyGnBgvowFoDya0qU9eo82XaZag0lAzPCqLJHELsFWFz6QsDqC/U69JVpcqO
+      hM/+53kqQoFVasstmSV5Ig7tFA6DPWqSNmi/tZaAibtdltIGz89U2vzFN2+xV/qK
+      /+A+/YGCOp4iMWgpZyOeEvYtp0gLKOVSBWLw4Zit0KVsKKKFMgRKx/f/zqG7Z2US
+      IUh1YXS/6ysYgqh2KzdVloyf+fSCrJcx45znyhcMovyqcLlG3/BDQOrHUvVNQOf0
+      d642OQbRi3bdO3YTpS0A6z5kKEHeog==
+      -----END CERTIFICATE-----
+    director-key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEogIBAAKCAQEA6KR3DbaO2IuB0O1PF9dIJ0TwkKUxFJxftlrTjqIHwAUptm6m
+      T3cv5nvWcb5PNPoznTnvqw4ur5rA4sRX6PSaN85J7L8hVseNwLOoOaqY0VopzxKz
+      m4X/fJoPaTOzrukamVDqTBYUzJ2+2bsk3kLxygdiwHuGP/GFuHL1qqhQEqtnLZgW
+      ZNdWA2JrUf2RWf3l/FY911gMsNJnuFcrlo/z3M2+SJ6omkbrc9X2NQfWmpt8AK3f
+      HKa28S0Z7hkGgZPhB3ZCVLsU+DWDA2hef2J/R3LI++ZC7ULf3/f34bI3RZit6Cpp
+      BRJImA1J1z5kcP0B0EJgJHSw0+riAE5Wm2dXpQIDAQABAoIBAGCoPGKxL8ZeqBAD
+      GPKB2pOePAkM6Uhz8/xS3kULowav3nXSoTyw+3DakO1vMX+EWL+BW8eJO/Jv7KYL
+      B69dOVnoVqSLgLGKdaXTvxg+fgG1YVuMnJ0IXm8Jn0+JUKViak+64627Gucsvye9
+      boL983GKAgiRCeU1VuactN8z0Rj/3RCS4eX5WZWlN6VfOCzIeZrADCCiloVeBa6D
+      wbyAOt4TbJDlFnycljvFKk2Ch5OCOz3RlnOrC0Be1imO/rCW3V5FUYqzmVd2yXkK
+      ODs0H/lAm9oLks2H5CiVzTaTM0+edj2NTvG4eObFkChhkP0+4opNF83Wk2jd1nNj
+      3D3yawECgYEA/SHisVMFGX+HbbwOXMekwQILgxTRZRqJ1+xE3iTfafvcQ2+Ic8uM
+      W5mIDvsGI/4XsJq2cDEuJ2+yBpjnVNNVGHhyLgbMTWhU5ZbxJtrrY7dVZNNzpf9U
+      APpv2+7lVQ8qSKgVTFSaEV9f9+R+k5FOxago8pOOOLYIox0ay9unCOUCgYEA60co
+      AcngdLpllDIu5aJ3UgTyhgdLAi7Beh8ACFbBAckd1M0Epk7kgSnzvWa7d0RptQC9
+      Vl6UyQzJGHZhexRJWfSOxCK2K9ckMftzRB1UqHQyEI+b6ClCzY4pY3bEx8k5Be0K
+      h8svd/Wg/FYlpu8x1Upacw6p7ddXFmbGmRt358ECgYBgzd+q3sv5d1rsbVm0w6jP
+      IyAR7hkyKBcFG1cu+TzzhB01MOcnGXXA5hMxX3B2vUqEAHa6qyQycrXLbhgxyWwm
+      opFP5suk4rxs3O+2Y0xX4xnmKDN3DREsGppCqrbLc7RA+v7CJSySbj3+SETb3Fsa
+      nfei5SkjqQHel1fTFFppvQKBgE66js6aaPtmbBs896hrxxWxBh6HTjg6wQ9GVFJ2
+      BTu9ure8qvOjrp7yFNeqCs0MHXst9i1ylML5/kirRE9VKH5rcWJ8Yw0kfr4i8B04
+      211LFH2qMHdtZyc1jO/1jD92PBiZi06JVScFEIufoBXOMJS4vq+FlqM5zbB3T7lo
+      EaWBAoGAaVfmNBNFICrnvXONIWyVGU6750NliDZ2w7QN+c7esImchYYN2AN/vfW8
+      w5KO027lJBiJ9QgaM6sYxOyBjl+7q5a/HlCu8JpkBPthdAXEs5RYt2TRMVt00CRM
+      LsGWI2d7Y1LlkmhDDiUs3TUylg3OmhkCRwWV0zJAJ3eUg9UGy/U=
+      -----END RSA PRIVATE KEY-----
+
+name: bosh
+
+releases:
+- name: bosh
+  url: https://bosh.io/d/github.com/cloudfoundry/bosh?v=261.4
+  sha1: 4da9cedbcc8fbf11378ef439fb89de08300ad091
+- name: bosh-openstack-cpi
+  url: https://bosh.io/d/github.com/cloudfoundry-incubator/bosh-openstack-cpi-release?v=31
+  sha1: ed48a0e021805448e4581764d11d20696a4eaecb
+
+resource_pools:
+- name: vms
+  network: private
+  stemcell:
+    url: https://bosh.io/d/stemcells/bosh-openstack-kvm-ubuntu-trusty-go_agent?v=3363.12
+    sha1: 7b95f76ce3539f9ae78c403f9805a62d30a63710
+  cloud_properties:
+    instance_type: m1.xlarge
+
+disk_pools:
+- name: disks
+  disk_size: 20_000
+
+networks:
+- name: private
+  type: manual
+  subnets:
+  - range: (( stub.openstack.network.cidr ))
+    gateway: (( stub.openstack.network.gw ))
+    dns: [8.8.8.8]
+    cloud_properties: {net_id: (( stub.openstack.network.uuid ))}
+- name: public
+  type: vip
+
+jobs:
+- name: bosh
+  instances: 1
+
+  templates:
+  - {name: nats, release: bosh}
+  - {name: postgres, release: bosh}
+  - {name: blobstore, release: bosh}
+  - {name: director, release: bosh}
+  - {name: health_monitor, release: bosh}
+  - {name: registry, release: bosh}
+  - {name: openstack_cpi, release: bosh-openstack-cpi}
+
+  resource_pool: vms
+  persistent_disk_pool: disks
+
+  networks:
+  - name: private
+    static_ips:
+    - (( stub.server.bosh.private-ip ))
+    default: [dns, gateway]
+  - name: public
+    static_ips:
+    - (( stub.server.bosh.public-ip ))
+
+  properties:
+    nats:
+      address: 127.0.0.1
+      user: nats
+      password: nats-password # <--- Uncomment & change
+
+    postgres: &db
+      listen_address: 127.0.0.1
+      host: 127.0.0.1
+      user: postgres
+      password: postgres-password # <--- Uncomment & change
+      database: bosh
+      adapter: postgres
+
+    registry:
+      address: (( stub.server.bosh.private-ip ))
+      host: (( stub.server.bosh.private-ip ))
+      db: *db
+      http:
+        user: admin
+        password: admin # <--- Uncomment & change
+        port: 25777
+      username: admin
+      password: admin # <--- Uncomment & change
+      port: 25777
+
+    blobstore:
+      address: (( stub.server.bosh.private-ip ))
+      port: 25250
+      provider: dav
+      director:
+        user: director
+        password: director-password # <--- Uncomment & change
+      agent:
+        user: agent
+        password: agent-password # <--- Uncomment & change
+
+    director:
+      address: 127.0.0.1
+      name: my-bosh
+      db: *db
+      cpi_job: openstack_cpi
+      max_threads: 3
+      user_management:
+        provider: local
+        local:
+          users:
+          - {name: admin, password: admin} # <--- Uncomment & change
+          - {name: hm, password: hm-password} # <--- Uncomment & change
+      ssl:
+        key: (( stub.ssl.director-key ))
+        cert: (( stub.ssl.director-cert ))
+
+    hm:
+      director_account:
+        user: hm
+        password: hm-password # <--- Uncomment & change
+        ca_cert: (( stub.ssl.ca-cert ))
+      resurrector_enabled: true
+
+    openstack: &openstack
+      auth_url: (( stub.openstack.auth_url ))
+      project: (( stub.openstack.project ))
+      domain: (( stub.openstack.domain ))
+      username: (( stub.openstack.username ))
+      api_key: (( stub.openstack.password ))
+      default_key_name: (( stub.openstack.key-pair-name))
+      default_security_groups:
+      - (( stub.openstack.security-group-name ))
+
+    agent:
+      mbus: (( "nats://nats:nats-password@" stub.server.bosh.private-ip ":4222" )) # <--- Uncomment & change
+
+    ntp: &ntp [0.pool.ntp.org, 1.pool.ntp.org]
+
+cloud_provider:
+  template: {name: openstack_cpi, release: bosh-openstack-cpi}
+
+  ssh_tunnel:
+    host: (( stub.server.bosh.public-ip ))
+    port: 22
+    user: vcap
+    private_key: ./bosh.pem # Path relative to this manifest file
+
+  mbus: (( "https://mbus:mbus-password@" stub.server.bosh.public-ip ":6868" )) # <--- Uncomment & change
+
+  properties:
+    openstack: *openstack
+    agent: {mbus: "https://mbus:mbus-password@0.0.0.0:6868"} # <--- Uncomment & change
+    blobstore: {provider: local, path: /var/vcap/micro_bosh/data/cache}
+    ntp: *ntp

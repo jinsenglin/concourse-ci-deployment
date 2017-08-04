@@ -25,4 +25,4 @@ else
     echo Skipping making deployments/openstack-stub.yml
 fi
 
-
+spiff merge templates/bosh-director-deployment.yml deployments/openstack-stub.yml | tee deployments/bosh-director-deployment.yml
