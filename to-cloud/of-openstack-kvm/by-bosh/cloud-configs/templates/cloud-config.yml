@@ -1,0 +1,51 @@
+---
+stub:
+  openstack:
+    network:
+      cidr: 192.168.200.0/24 # <--- Replace with a private subnet CIDR
+      gw: 192.168.200.1 # <--- Replace with a private subnet's gateway
+      uuid: 0cb3a322-67d9-47ef-bd54-7420c106fd2b # <--- # Replace with private network UUID
+      reserved:
+      - 192.168.200.1 # already allocated for gateway
+      - 192.168.200.2 # already allocated for dhcp
+      - 192.168.200.3 # already allocated for director
+
+azs:
+- name: default
+  cloud_properties:
+    availability_zone: nova
+
+vm_types:
+- name: default
+  cloud_properties:
+    instance_type: m1.small
+- name: large
+  cloud_properties:
+    instance_type: m1.large
+
+disk_types:
+- name: default
+  disk_size: 3000
+- name: large
+  disk_size: 50_000
+
+networks:
+- name: private
+  type: manual
+  subnets:
+  - range: (( stub.openstack.network.cidr ))
+    gateway: (( stub.openstack.network.gw ))
+    az: default
+    dns: [8.8.8.8]
+    cloud_properties:
+      net_id: (( stub.openstack.network.uuid ))
+    reserved: (( stub.openstack.network.reserved ))
+- name: public
+  type: vip
+
+compilation:
+  workers: 5
+  reuse_compilation_vms: true
+  az: default
+  vm_type: default
+  network: private

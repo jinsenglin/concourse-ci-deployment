@@ -70,6 +70,15 @@ bosh-init deploy bosh-director.yml
 # Run `bosh-init delete bosh-director.yml`
 ```
 
+Use helper script `make-cloud-configs.sh` to setup bosh director
+
+```
+cd by-bosh/cloud-configs
+./make-cloud-configs.sh
+
+# output: configs/
+```
+
 ## Phase 2
 
 Use helper script `make-final-concourse-ci-deployment.sh` to generate final concourse-ci.yml
@@ -111,6 +120,7 @@ BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 
 # TODO
 
+* by-bosh/cloud-configs/make-cloud-configs.sh
 * by-bosh/cloud-resources/make-cloud-resources.sh reserve-collect
 * by-bosh/bosh-deployments/make-final-concourse-ci-deployment.sh
 * 4 nodes deployment (currently missing vault node)
