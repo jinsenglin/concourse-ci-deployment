@@ -6,9 +6,15 @@
 
 ---
 
-# Do per deployment
+# Do per bosh director deployment
 
 * Create a router
 * Create a network
 * Create a subnet
-* Get 2 floating IPs
+* Get 1 floating IP
+
+---
+
+# Do per concourse ci deployment
+
+* Get 1 floating IP
