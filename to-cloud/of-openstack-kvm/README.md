@@ -17,6 +17,8 @@
 
 # Prerequisites
 
+## Phase 1
+
 Method 1: Use helper script `make-cloud-resources.sh` to collect information of available existing cloud resources.
 
 ```
@@ -67,6 +69,8 @@ bosh-init deploy bosh-director.yml
 # To delete this deployment
 # Run `bosh-init delete bosh-director.yml`
 ```
+
+## Phase 2
 
 Use helper script `make-final-concourse-ci-deployment.sh` to generate final concourse-ci.yml
 
