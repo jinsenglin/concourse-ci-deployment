@@ -100,6 +100,8 @@ BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 * bosh-director.release 261.4 passed the test.
 * concourse.release 2.7.0 passed the test.
 * garden-runc.release 1.3.0 passed the test.
+* bosh director login: admin / admin
+* concourse ci login: admin / admin
 
 ---
 
