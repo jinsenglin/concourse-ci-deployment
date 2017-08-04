@@ -1,8 +1,8 @@
 # Do once
 
 * Get a project admin username and password
-* Import the key pair
-* Create a security group
+* Import the key pair (use by-bosh/ssh-keys/bosh.pem)
+* Create a security group (open all)
 
 ---
 
