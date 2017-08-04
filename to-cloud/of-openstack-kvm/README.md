@@ -70,7 +70,7 @@ bosh-init deploy bosh-director.yml
 # Run `bosh-init delete bosh-director.yml`
 ```
 
-Use helper script `make-cloud-configs.sh` to setup bosh director
+Use helper script `make-cloud-configs.sh` to setup BOSH Director
 
 ```
 cd by-bosh/cloud-configs
