@@ -107,3 +107,4 @@ BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 
 * by-bosh/cloud-resources/make-cloud-resources.sh reserve-collect
 * by-bosh/bosh-deployments/make-final-concourse-ci-deployment.sh
+* 4 nodes deployment (currently missing vault node)
