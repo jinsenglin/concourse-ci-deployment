@@ -39,7 +39,7 @@ cd by-bosh/ssl-certs
 ./make-self-signed-ssl-certs.sh
 
 # or use BOSH_DIRECTOR_HOST to precede OS_RES_FLOATING_IP_BOSH_DIRECTOR 
-BOSH_DIRECTOR_HOST=192.168.210.25 ./make-self-signed-ssl-certs.sh
+BOSH_DIRECTOR_HOST=192.168.240.34 ./make-self-signed-ssl-certs.sh
 
 # output: certs/
 ```
@@ -79,7 +79,7 @@ Use `bosh` CLI to deploy Concourse CI.
 
 ```
 cd by-bosh/concourse-ci-deployment
-BOSH_DIRECTOR_HOST=192.168.210.25 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_HOST -d concourse-ci concourse-ci.yml
+BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_HOST -d concourse-ci concourse-ci.yml
 
 # output:
 ```
@@ -88,11 +88,11 @@ BOSH_DIRECTOR_HOST=192.168.210.25 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 
 # Note
 
-* IP 192.168.210.25 is the floating IP collected from / assigned by OpenStack.
+* IP 192.168.240.34 is the floating IP collected from / assigned by OpenStack.
 
 ---
 
 # TODO
 
-* by-bosh/cloud-resources/make-cloud-resources.sh
+* by-bosh/cloud-resources/make-cloud-resources.sh reserve-collect
 * by-bosh/bosh-deployments/make-final-concourse-ci-deployment.sh
