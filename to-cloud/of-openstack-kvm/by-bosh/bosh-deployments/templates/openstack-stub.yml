@@ -14,13 +14,13 @@ stub:
       uuid: REPLACE_WITH_OS_RES_NETWORK_UUID # <--- # Replace with private network UUID
       reserved:
       - REPLACE_WITH_OS_RES_NETWORK_SUBNET_GW # already allocated for gateway
-      - OS_RES_NETWORK_SUBNET_DHCP # already allocated for dhcp
-      - OS_RES_NETWORK_SUBNET_DIRECTOR # already allocated for director
+      - REPLACE_WITH_OS_RES_NETWORK_SUBNET_DHCP # already allocated for dhcp
+      - REPLACE_WITH_OS_RES_NETWORK_SUBNET_DIRECTOR # already allocated for director
 
   server:
     bosh:
-      private-ip: OS_RES_NETWORK_SUBNET_DIRECTOR # <--- Replace with a private IP 
-      public-ip: OS_RES_FLOATING_IP_BOSH_DIRECTOR # <--- Replace with a floating IP
+      private-ip: REPLACE_WITH_OS_RES_NETWORK_SUBNET_DIRECTOR # <--- Replace with a private IP 
+      public-ip: REPLACE_WITH_OS_RES_FLOATING_IP_BOSH_DIRECTOR # <--- Replace with a floating IP
   ssl:
     ca-cert: |
       -----BEGIN CERTIFICATE-----
