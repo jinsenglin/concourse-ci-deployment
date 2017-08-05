@@ -84,6 +84,8 @@ Use helper script `backup-phase1.sh` to backup phase 1 outputs
 ```
 cd by-bosh/backup-restore-phase1
 ./backup-phase1.sh <backup dest dir>
+
+# output: <backup src dir>/phase1
 ```
 
 ## Phase 2
@@ -109,6 +111,8 @@ Use helper script `backup-phase2.sh` to restore phase 2 outputs
 ```
 cd by-bosh/backup-restore-phase2
 ./restore-phase2.sh <backup src dir>
+
+# output: <backup src dir>/phase2
 ```
 
 ---
