@@ -104,6 +104,13 @@ cd by-bosh/bosh-deployments
 # output: deployments/
 ```
 
+Use helper script `backup-phase2.sh` to restore phase 2 outputs
+
+```
+cd by-bosh/backup-restore-phase2
+./restore-phase2.sh <backup src dir>
+```
+
 ---
 
 # Deployment
