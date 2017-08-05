@@ -145,6 +145,8 @@ BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIR
 
 # TODO
 
+* by-bosh/backup-restore-phase2/backup-phase2.sh
+* by-bosh/backup-restore-phase2/restore-phase2.sh
 * by-bosh/backup-restore-phase1/backup-phase1.sh
 * by-bosh/backup-restore-phase1/restore-phase1.sh
 * by-bosh/cloud-configs/make-cloud-configs.sh
