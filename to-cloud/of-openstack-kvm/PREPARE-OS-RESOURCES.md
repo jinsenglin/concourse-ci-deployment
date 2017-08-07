@@ -1,10 +1,10 @@
 # Do once
 
 * Get a project admin username and password
-* Import the key pair (use by-bosh/ssh-keys/bosh.pem)
+* Import the public key (use the private key by-bosh/ssh-keys/bosh.pem)
 * Create a security group (open all)
 
-To generate public key file from existing private key file by-bosh/ssh-keys/bosh.pem
+To generate a public key file from the existing private key file by-bosh/ssh-keys/bosh.pem
 
 ```
 cd by-bosh/ssh-keys/
@@ -14,6 +14,13 @@ mkdir keys
 
 chmod 600 bosh.pem
 ssh-keygen -y -f bosh.pem | tee keys/bosh.pub
+```
+
+To import the public key
+
+```
+cd by-bosh/ssh-keys/keys
+openstack keypair create --public-key bosh.pub bosh
 ```
 
 ---
