@@ -8,5 +8,8 @@ wget https://github.com/concourse/concourse/releases/download/v3.3.4/concourse_l
 mkdir /etc/concourse
 cp $(dirname $0)/service-keys/* /etc/concourse/
 
+adduser --system --group concourse
+chown -R concourse:concourse /etc/concourse
+
 #
 touch $(dirname $0)/installed
