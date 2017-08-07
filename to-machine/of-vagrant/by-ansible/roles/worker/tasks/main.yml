@@ -4,6 +4,14 @@
   file: path=/tmp/worker state=directory
 - name: Transfer the script
   copy: src=installer.sh dest=/tmp/worker/installer.sh mode=0777
+- name: Transfer the file used by the script
+  copy: src=concourse-worker.service dest=/tmp/worker/concourse-worker.service mode=0644
+- name: Transfer the file used by the script
+  copy: src=tsa_host_key.pub dest=/tmp/worker/tsa_host_key.pub mode=0400
+- name: Transfer the file used by the script
+  copy: src=worker_key.pem dest=/tmp/worker/worker_key.pem mode=0400
+- name: Transfer the file used by the script
+  template: src=worker_environment dest=/tmp/worker/worker_environment mode=0644
 - name: Execute the script
   command: sh /tmp/worker/installer.sh
   register: installer
