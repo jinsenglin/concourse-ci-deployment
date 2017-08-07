@@ -1,19 +1,5 @@
 #!/bin/bash
 
-<<PSEUDO
-bosh --ca-cert root-ca.pem -e $BOSH_DIRECTOR_IP login
-
-spiff merge cloud-config-template.yml openstack-stub.yml > cloud-config.yml
-
-bosh-cli --ca-cert certs/rootCA.pem -e $BOSH_DIRECTOR_IP update-cloud-config cloud-config.yml
-
-bosh-cli --ca-cert certs/rootCA.pem -e $BOSH_DIRECTOR_IP upload-stemcell STEMCELL-URL
-
-bosh-cli --ca-cert certs/rootCA.pem -e $BOSH_DIRECTOR_IP env # to get director uuid
-
-MODIFY director-stub.yml
-PSEUDO
-
 set -e
 
 [ -f rc ] && source rc
@@ -39,8 +25,7 @@ spiff merge templates/cloud-config.yml openstack-stub.yml | tee configs/cloud-co
 bosh --ca-cert root-ca.pem -e $BDIP login
 bosh --ca-cert root-ca.pem -e $BDIP update-cloud-config -n configs/cloud-config.yml
 
-#bosh --ca-cert root-ca.pem -e $BDIP upload-stemcell $STEMCELL_URL
-
 BDUUID=$(bosh --ca-cert root-ca.pem -e $BDIP env --json | jq -r '.Tables[0].Rows[1][1]')
-
 sed "s/REPLACE_WITH_BOSH_DIRECTOR_UUID/$BDUUID/g" templates/director-stub.yml | tee configs/director-stub.yml
+
+bosh --ca-cert root-ca.pem -e $BDIP upload-stemcell https://bosh.io/d/stemcells/bosh-openstack-kvm-ubuntu-trusty-go_agent?v=3363.12
