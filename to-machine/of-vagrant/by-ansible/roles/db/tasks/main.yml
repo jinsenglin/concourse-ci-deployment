@@ -1,14 +1,16 @@
 ---
 # tasks file for web
+- name: Sandbox the script
+  file: path=/tmp/db state=directory
 - name: Transfer the script
-  copy: src=installer.sh dest=/tmp/installer.sh mode=0777
+  copy: src=installer.sh dest=/tmp/db/installer.sh mode=0777
 - name: Execute the script
-  command: sh /tmp/installer.sh
+  command: sh /tmp/db/installer.sh
   register: installer
   become: true
   args:
-    chdir: /tmp
-    creates: /tmp/installed
+    chdir: /tmp/db
+    creates: /tmp/db/installed
   become_user: root
 - name: Debug the script
   debug: var=installer

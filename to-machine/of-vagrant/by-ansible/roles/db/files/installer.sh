@@ -16,4 +16,4 @@ sed -i "/listen_addresses/ a listen_addresses = '*'"                            
 systemctl start postgresql
 
 #
-touch /tmp/installed
+touch $(dirname $0)/installed
