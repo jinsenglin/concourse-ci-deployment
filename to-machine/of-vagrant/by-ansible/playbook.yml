@@ -1,17 +1,17 @@
 ---
-- name: Deploy Web Nodes
-  hosts: web
-  roles:
-    - role: web
-- name: Deploy DB Nodes
-  hosts: db
-  roles:
-    - role: db
-- name: Deploy Worker Nodes
-  hosts: worker
-  roles:
-    - role: worker
 - name: Deploy Vault Nodes
   hosts: vault
   roles:
     - role: vault
+- name: Deploy DB Nodes
+  hosts: db
+  roles:
+    - role: db
+- name: Deploy Web Nodes
+  hosts: web
+  roles:
+    - role: web
+- name: Deploy Worker Nodes
+  hosts: worker
+  roles:
+    - role: worker
