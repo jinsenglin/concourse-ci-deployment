@@ -17,7 +17,7 @@ chown -R concourse:concourse /etc/concourse
 
 ln -sf /etc/concourse/concourse-web.service /etc/systemd/system/concourse-web.service
 
-#systemctl start concourse-web
+systemctl start concourse-web
 
 #
 touch $(dirname $0)/installed
