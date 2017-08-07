@@ -4,3 +4,6 @@
   copy: src=installer.sh dest=/tmp/installer.sh mode=0777
 - name: Execute the script
   command: sh /tmp/installer.sh
+  register: installer
+- name: Debug the script
+  debug: var=installer
