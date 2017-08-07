@@ -6,6 +6,9 @@
   command: sh /tmp/installer.sh
   register: installer
   become: true
+  args:
+    chdir: /tmp
+    creates: /tmp/installed
   become_user: root
 - name: Debug the script
   debug: var=installer

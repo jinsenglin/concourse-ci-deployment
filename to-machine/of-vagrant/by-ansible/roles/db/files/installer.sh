@@ -14,3 +14,6 @@ systemctl stop postgresql
 sed -i "$ a host    all             all             0.0.0.0/0                trust" /etc/postgresql/9.5/main/pg_hba.conf
 sed -i "/listen_addresses/ a listen_addresses = '*'"                                /etc/postgresql/9.5/main/postgresql.conf
 systemctl start postgresql
+
+#
+touch /tmp/installed
