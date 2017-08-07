@@ -43,3 +43,9 @@ ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -vvvv -i hosts -e @vars.yml pla
 * by-ansible/roles/db/tasks/main.yml
 * by-ansible/roles/worker/tasks/main.yml
 * by-ansible/roles/vault/tasks/main.yml
+
+---
+
+# REFERENCE
+
+* https://www.digitalocean.com/community/tutorials/how-to-install-concourse-ci-on-ubuntu-16-04
