@@ -1,2 +1,4 @@
 ---
 # defaults file for web
+CONCOURSE_POSTGRES_DATA_SOURCE:
+CONCOURSE_EXTERNAL_URL:
