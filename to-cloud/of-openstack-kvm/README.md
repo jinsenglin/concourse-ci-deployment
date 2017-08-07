@@ -123,7 +123,7 @@ Use `bosh` CLI to deploy Concourse CI.
 
 ```
 cd by-bosh/concourse-ci-deployment
-BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_HOST -d concourse-ci concourse-ci.yml
+BOSH_DIRECTOR_HOST=192.168.240.34 bosh deploy --ca-cert root-ca.pem -e $BOSH_DIRECTOR_HOST -d concourse-ci deploy concourse-ci.yml
 
 # output:
 ```
