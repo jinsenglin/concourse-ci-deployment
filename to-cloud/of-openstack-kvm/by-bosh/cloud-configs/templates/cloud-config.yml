@@ -6,9 +6,7 @@ stub:
       gw: 192.168.200.1 # <--- Replace with a private subnet's gateway
       uuid: 0cb3a322-67d9-47ef-bd54-7420c106fd2b # <--- # Replace with private network UUID
       reserved:
-      - 192.168.200.1 # already allocated for gateway
-      - 192.168.200.2 # already allocated for dhcp
-      - 192.168.200.3 # already allocated for director
+      - <<: (( merge ))
 
 azs:
 - name: default
