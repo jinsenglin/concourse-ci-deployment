@@ -12,10 +12,10 @@ cp $(dirname $0)/session_signing_key.pem /etc/concourse/session_signing_key.pem
 cp $(dirname $0)/authorized_worker_keys /etc/concourse/authorized_worker_keys
 cp $(dirname $0)/web_environment /etc/concourse/web_environment
 
-ln -sf /etc/concourse/concourse-web.service /etc/systemd/system/concourse-web.service
-
 adduser --system --group concourse
 chown -R concourse:concourse /etc/concourse
+
+ln -sf /etc/concourse/concourse-web.service /etc/systemd/system/concourse-web.service
 
 #systemctl start concourse-web
 

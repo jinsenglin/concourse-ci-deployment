@@ -1,4 +1,4 @@
 ---
 # defaults file for web
-CONCOURSE_POSTGRES_DATA_SOURCE: postgres://user:pass@10.0.32.0/concourse
-CONCOURSE_EXTERNAL_URL: http://10.0.16.10:8080
+CONCOURSE_POSTGRES_DATA_SOURCE: postgres://concourse@192.168.33.102/atc
+CONCOURSE_EXTERNAL_URL: http://192.168.0.106:8080
