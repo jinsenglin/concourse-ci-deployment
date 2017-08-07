@@ -4,6 +4,16 @@
   file: path=/tmp/web state=directory
 - name: Transfer the script
   copy: src=installer.sh dest=/tmp/web/installer.sh mode=0777
+- name: Transfer the file used by the script
+  copy: src=concourse-web.service dest=/tmp/web/concourse-web.service mode=0644
+- name: Transfer the file used by the script
+  copy: src=tsa_host_key.pem dest=/tmp/web/tsa_host_key.pem mode=0400
+- name: Transfer the file used by the script
+  copy: src=session_signing_key.pem dest=/tmp/web/session_signing_key.pem mode=0400
+- name: Transfer the file used by the script
+  copy: src=authorized_worker_keys dest=/tmp/web/authorized_worker_keys mode=0400
+- name: Transfer the file used by the script
+  template: src=web_environment dest=/tmp/web/web_environment mode=0644
 - name: Execute the script
   command: sh /tmp/web/installer.sh
   register: installer
