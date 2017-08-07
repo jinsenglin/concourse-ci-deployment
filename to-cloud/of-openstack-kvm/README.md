@@ -119,6 +119,13 @@ cd by-bosh/backup-restore-phase2
 
 # Deployment
 
+Use helper script `restore-phase2.sh` to restore phase 1 outputs
+
+```
+cd by-bosh/backup-restore-phase2
+./restore-phase2.sh <backup src dir>
+```
+
 Use `bosh` CLI to deploy Concourse CI.
 
 ```
