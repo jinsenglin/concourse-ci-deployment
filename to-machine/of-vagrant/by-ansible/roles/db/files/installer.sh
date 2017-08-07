@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo TODO
+echo "Current user: $(whoami)"

@@ -5,5 +5,7 @@
 - name: Execute the script
   command: sh /tmp/installer.sh
   register: installer
+  become: true
+  become_user: root
 - name: Debug the script
   debug: var=installer
