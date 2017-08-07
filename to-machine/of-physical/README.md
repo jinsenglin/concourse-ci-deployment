@@ -15,6 +15,10 @@
 
 Modify the file `by-ansible/hosts`.
 
+Modify the file `by-ansible/roles/web/defaults/main.yml`.
+
+Modify the file `by-ansible/roles/worker/defaults/main.yml`.
+
 Make sure python 2.7+ pre-installed in the target machines (CPU: x86_64, OS: Ubuntu).
 
 ---
