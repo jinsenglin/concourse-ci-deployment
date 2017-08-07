@@ -1,11 +1,11 @@
 [web]
-web ansible_host=192.168.33.101 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=web.pem
+web ansible_host=192.168.33.101 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=host-keys/web.pem
 
 [db]
-db ansible_host=192.168.33.102 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=db.pem
+db ansible_host=192.168.33.102 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=host-keys/db.pem
 
 [worker]
-worker ansible_host=192.168.33.103 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=worker.pem
+worker ansible_host=192.168.33.103 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=host-keys/worker.pem
 
 [vault]
-vault ansible_host=192.168.33.104 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=vault.pem
+vault ansible_host=192.168.33.104 ansible_user=ubuntu ansible_pass=ubuntu ansible_private_key_file=host-keys/vault.pem
