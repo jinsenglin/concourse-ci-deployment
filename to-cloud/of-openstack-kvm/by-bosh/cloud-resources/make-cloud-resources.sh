@@ -28,6 +28,7 @@ function collect_op() {
     echo "export OS_RES_NETWORK_SUBNET_DHCP=192.168.103.2" | tee -a $resources/rc
     echo "export OS_RES_NETWORK_SUBNET_DIRECTOR=192.168.103.3" | tee -a $resources/rc
     echo "export OS_RES_FLOATING_IP_BOSH_DIRECTOR=192.168.240.34" | tee -a $resources/rc
+    echo "export OS_RES_FLOATING_IP_CONCOURSE_CI=192.168.240.17" | tee -a $resources/rc
 }
 
 function reserve_op() {
