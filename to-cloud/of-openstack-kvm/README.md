@@ -133,6 +133,9 @@ cd by-bosh/concourse-ci-deployment
 bosh --ca-cert root-ca.pem -e 192.168.240.34 -d concourse-ci deploy -n concourse-ci.yml
 
 # output:
+
+# To delete this deployment
+# Run `bosh --ca-cert root-ca.pem -e 192.168.240.34 -d concourse-ci delete-deployment -n`
 ```
 
 ---
