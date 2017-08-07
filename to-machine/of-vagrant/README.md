@@ -39,13 +39,12 @@ ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -vvvv -i hosts -e @vars.yml pla
 
 # Note
 
-* Concourse CI v3.3.4 passed the test?
+* Concourse CI v3.3.4 passed the test.
 
 ---
 
 # TODO
 
-* by-ansible/roles/worker/files/installer.sh
 * by-ansible/roles/vault/files/installer.sh
 
 ---

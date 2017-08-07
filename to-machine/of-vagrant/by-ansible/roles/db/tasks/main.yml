@@ -1,16 +1,16 @@
 ---
 # tasks file for db
 - name: Sandbox the script
-  file: path=/tmp/db state=directory
+  file: path=/opt/concourse-ci/db state=directory
 - name: Transfer the script
-  copy: src=installer.sh dest=/tmp/db/installer.sh mode=0777
+  copy: src=installer.sh dest=/opt/concourse-ci/db/installer.sh mode=0777
 - name: Execute the script
-  command: sh /tmp/db/installer.sh
+  command: sh /opt/concourse-ci/db/installer.sh
   register: installer
   become: true
   args:
-    chdir: /tmp/db
-    creates: /tmp/db/installed
+    chdir: /opt/concourse-ci/db
+    creates: /opt/concourse-ci/db/installed
   become_user: root
 - name: Debug the script
   debug: var=installer

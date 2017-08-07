@@ -1,16 +1,16 @@
 ---
 # tasks file for vault
 - name: Sandbox the script
-  file: path=/tmp/vault state=directory
+  file: path=/opt/concourse-ci/vault state=directory
 - name: Transfer the script
-  copy: src=installer.sh dest=/tmp/vault/installer.sh mode=0777
+  copy: src=installer.sh dest=/opt/concourse-ci/vault/installer.sh mode=0777
 - name: Execute the script
-  command: sh /tmp/vault/installer.sh
+  command: sh /opt/concourse-ci/vault/installer.sh
   register: installer
   become: true
   args:
-    chdir: /tmp/vault
-    creates: /tmp/vault/installed
+    chdir: /opt/concourse-ci/vault
+    creates: /opt/concourse-ci/vault/installed
   become_user: root
 - name: Debug the script
   debug: var=installer

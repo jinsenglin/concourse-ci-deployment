@@ -1,24 +1,24 @@
 ---
 # tasks file for worker
 - name: Sandbox the script
-  file: path=/tmp/worker state=directory
+  file: path=/opt/concourse-ci/worker state=directory
 - name: Transfer the script
-  copy: src=installer.sh dest=/tmp/worker/installer.sh mode=0777
+  copy: src=installer.sh dest=/opt/concourse-ci/worker/installer.sh mode=0777
 - name: Transfer the file used by the script
-  copy: src=concourse-worker.service dest=/tmp/worker/concourse-worker.service mode=0644
+  copy: src=concourse-worker.service dest=/opt/concourse-ci/worker/concourse-worker.service mode=0644
 - name: Transfer the file used by the script
-  copy: src=tsa_host_key.pub dest=/tmp/worker/tsa_host_key.pub mode=0400
+  copy: src=tsa_host_key.pub dest=/opt/concourse-ci/worker/tsa_host_key.pub mode=0400
 - name: Transfer the file used by the script
-  copy: src=worker_key.pem dest=/tmp/worker/worker_key.pem mode=0400
+  copy: src=worker_key.pem dest=/opt/concourse-ci/worker/worker_key.pem mode=0400
 - name: Transfer the file used by the script
-  template: src=worker_environment dest=/tmp/worker/worker_environment mode=0644
+  template: src=worker_environment dest=/opt/concourse-ci/worker/worker_environment mode=0644
 - name: Execute the script
-  command: sh /tmp/worker/installer.sh
+  command: sh /opt/concourse-ci/worker/installer.sh
   register: installer
   become: true
   args:
-    chdir: /tmp/worker
-    creates: /tmp/worker/installed
+    chdir: /opt/concourse-ci/worker
+    creates: /opt/concourse-ci/worker/installed
   become_user: root
 - name: Debug the script
   debug: var=installer

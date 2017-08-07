@@ -1,26 +1,26 @@
 ---
 # tasks file for web
 - name: Sandbox the script
-  file: path=/tmp/web state=directory
+  file: path=/opt/concourse-ci/web state=directory
 - name: Transfer the script
-  copy: src=installer.sh dest=/tmp/web/installer.sh mode=0777
+  copy: src=installer.sh dest=/opt/concourse-ci/web/installer.sh mode=0777
 - name: Transfer the file used by the script
-  copy: src=concourse-web.service dest=/tmp/web/concourse-web.service mode=0644
+  copy: src=concourse-web.service dest=/opt/concourse-ci/web/concourse-web.service mode=0644
 - name: Transfer the file used by the script
-  copy: src=tsa_host_key.pem dest=/tmp/web/tsa_host_key.pem mode=0400
+  copy: src=tsa_host_key.pem dest=/opt/concourse-ci/web/tsa_host_key.pem mode=0400
 - name: Transfer the file used by the script
-  copy: src=session_signing_key.pem dest=/tmp/web/session_signing_key.pem mode=0400
+  copy: src=session_signing_key.pem dest=/opt/concourse-ci/web/session_signing_key.pem mode=0400
 - name: Transfer the file used by the script
-  copy: src=authorized_worker_keys dest=/tmp/web/authorized_worker_keys mode=0400
+  copy: src=authorized_worker_keys dest=/opt/concourse-ci/web/authorized_worker_keys mode=0400
 - name: Transfer the file used by the script
-  template: src=web_environment dest=/tmp/web/web_environment mode=0644
+  template: src=web_environment dest=/opt/concourse-ci/web/web_environment mode=0644
 - name: Execute the script
-  command: sh /tmp/web/installer.sh
+  command: sh /opt/concourse-ci/web/installer.sh
   register: installer
   become: true
   args:
-    chdir: /tmp/web
-    creates: /tmp/web/installed
+    chdir: /opt/concourse-ci/web
+    creates: /opt/concourse-ci/web/installed
   become_user: root
 - name: Debug the script
   debug: var=installer
