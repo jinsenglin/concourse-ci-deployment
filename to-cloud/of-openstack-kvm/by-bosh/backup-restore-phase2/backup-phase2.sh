@@ -15,8 +15,8 @@ DEST=$1/phase2
 [ -d $DEST ] && rm -rf $DEST
 mkdir -p $DEST
 
-cp -r ../cloud-resources/resources/ $DEST
-cp -r ../ssl-certs/certs/ $DEST
-cp -r ../bosh-deployments/deployments/ $DEST
+cp -r ../cloud-resources/resources  $DEST
+cp -r ../ssl-certs/certs  $DEST
+cp -r ../bosh-deployments/deployments  $DEST
 cp -r ../bosh-director-deployment/bosh-director-state.json $DEST
-cp -r ../cloud-configs/configs/ $DEST
+cp -r ../cloud-configs/configs  $DEST

@@ -22,16 +22,16 @@ if [ ! -d $SRC ]; then
 fi
 
 [ -d ../cloud-resources/resources/ ] && rm -rf ../cloud-resources/resources/
-cp -r $SRC/resources/ ../cloud-resources/
+cp -r $SRC/resources  ../cloud-resources/
 
 [ -d ../ssl-certs/certs/ ] && rm -rf ../ssl-certs/certs/
-cp -r $SRC/certs/ ../ssl-certs/
+cp -r $SRC/certs  ../ssl-certs/
 
 [ -d ../bosh-deployments/deployments/ ] && rm -rf ../bosh-deployments/deployments/
-cp -r $SRC/deployments/ ../bosh-deployments/
+cp -r $SRC/deployments  ../bosh-deployments/
 
 [ -f ../bosh-director-deployment/bosh-director-state.json ] && rm -f ../bosh-director-deployment/bosh-director-state.json
 cp $SRC/bosh-director-state.json ../bosh-director-deployment/
 
 [ -d ../cloud-configs/configs/ ] && rm -rf ../cloud-configs/configs/
-cp -r $SRC/configs/ ../cloud-configs/
+cp -r $SRC/configs  ../cloud-configs/
