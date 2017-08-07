@@ -1,5 +1,5 @@
 ---
-# tasks file for web
+# tasks file for db
 - name: Sandbox the script
   file: path=/tmp/db state=directory
 - name: Transfer the script
