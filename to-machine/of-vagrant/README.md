@@ -48,4 +48,5 @@ ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -vvvv -i hosts -e @vars.yml pla
 
 # REFERENCE
 
+* https://concourse.ci/binaries.html
 * https://www.digitalocean.com/community/tutorials/how-to-install-concourse-ci-on-ubuntu-16-04
