@@ -3,7 +3,7 @@ stub:
   director-uuid: b632f67b-b291-47c1-9a0c-4ff3c5ecf53a
   concourse-vip: 192.168.210.28
 
-name: concourse
+name: concourse-ci
 
 director_uuid: (( stub.director-uuid ))
 
